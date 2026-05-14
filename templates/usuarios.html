@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuários</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Usuários cadastrados</h1>
+
+<div class="estante">
+
+{% for usuario in usuarios %}
+
+<div class="livro">
+
+    <h2>{{ usuario.nome }}</h2>
+
+    <p>Email: {{ usuario.email }}</p>
+
+    <p>Senha: {{ usuario.senha }}</p>
+
+    <p>Cadastro: {{ usuario.data_cadastro }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+</html>

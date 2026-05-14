@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</head>
+<body>
+
+<h1>Estante de livros</h1>
+
+<div class="search-box">
+    <input
+        class="search-txt"
+        type="text"
+        placeholder="Pesquisar livro..."
+        onkeyup="searchbar()"
+    >
+</div>
+
+<div class="estante">
+
+    <div class="livro">
+        <img src="{{ url_for('static', filename='dom-casmurro-32.jpg') }}">
+
+        <h2>Dom Casmurro</h2>
+
+        <p>Autor: Machado de Assis</p>
+
+        <a href="/livros/dom-casmurro.pdf" download>
+            <button>Baixar livro</button>
+        </a>
+    </div>
+
+
+    <div class="livro">
+        <img src="{{ url_for('static', filename='alienista.jpg') }}">
+
+        <h2>O Alienista</h2>
+
+        <p>Autor: Machado de Assis</p>
+
+        <a href="/livros/alienista.pdf" download>
+            <button>Baixar livro</button>
+        </a>
+    </div>
+
+
+    <div class="livro">
+        <img src="{{ url_for('static', filename='a-republica.jpg') }}">
+
+        <h2>A República</h2>
+
+        <p>Autor: Platão</p>
+
+        <a href="/livros/a-republica.pdf" download>
+            <button>Baixar livro</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

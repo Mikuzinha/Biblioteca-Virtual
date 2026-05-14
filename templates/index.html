@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual Escolar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Biblioteca Virtual Escolar</h1>
+
+        <p>
+            Seja muito bem-vindo à nossa Biblioteca Virtual Escolar.
+        </p>
+
+        <p>
+            Nosso objetivo é recomendar livros importantes para estudantes,
+            professores e leitores em geral.
+        </p>
+
+        <a class="botao" href="{{ url_for('livros') }}">
+            Ver livros
+        </a>
+    </div>
+
+</body>
+</html>
