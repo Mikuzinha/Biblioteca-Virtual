@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
 
     <link rel="stylesheet"
@@ -9,31 +10,75 @@
 </head>
 <body>
 
-<div class="container">
+<div class="login-page">
 
-<h1>Login</h1>
+    <div class="container">
 
-<form method="POST">
+        <h1>📚 Bem-vindo</h1>
 
-<input type="email"
-name="email"
-placeholder="Digite seu email"
-required>
+        <p class="subtitulo">
+            Entre na Biblioteca Virtual Escolar
+            para acessar livros e conteúdos educativos.
+        </p>
 
-<br><br>
+        <form method="POST">
 
-<input type="password"
-name="senha"
-placeholder="Digite sua senha"
-required>
+            <div class="input-group">
 
-<br><br>
+                <label>Email</label>
 
-<button type="submit">
-Entrar
-</button>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Digite seu email"
+                    required
+                >
 
-</form>
+            </div>
+
+            <div class="input-group">
+
+                <label>Senha</label>
+
+                <input
+                    type="password"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+            </div>
+
+            <div class="extras">
+
+                <label class="remember">
+                    <input type="checkbox">
+                    Lembrar de mim
+                </label>
+
+                <a href="#">Esqueceu a senha?</a>
+
+            </div>
+
+            <button type="submit">
+                🔓 Entrar
+            </button>
+
+        </form>
+
+        <div class="register">
+
+            <p>
+                Ainda não possui conta?
+            </p>
+
+            <a href="{{ url_for('cadastro') }}">
+    Criar conta
+</a>
+
+        </div>
+
+    </div>
 
 </div>
 

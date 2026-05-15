@@ -10,58 +10,140 @@
 </head>
 <body>
 
-<h1>Estante de livros</h1>
+    <header class="hero">
 
-<div class="search-box">
-    <input
-        class="search-txt"
-        type="text"
-        placeholder="Pesquisar livro..."
-        onkeyup="searchbar()"
-    >
-</div>
+        <h1>📚 Biblioteca Virtual Escolar</h1>
 
-<div class="estante">
+        <p class="subtitulo">
+            Explore obras clássicas, educativas e inspiradoras para ampliar seu conhecimento.
+        </p>
 
-    <div class="livro">
-        <img src="{{ url_for('static', filename='dom-casmurro-32.jpg') }}">
+    </header>
 
-        <h2>Dom Casmurro</h2>
+    <section class="info">
 
-        <p>Autor: Machado de Assis</p>
+        <h2>✨ Descubra novas leituras</h2>
 
-        <a href="/livros/dom-casmurro.pdf" download>
-            <button>Baixar livro</button>
-        </a>
+        <p>
+            Nossa biblioteca virtual foi criada para incentivar o hábito da leitura
+            entre estudantes, professores e leitores em geral.
+        </p>
+
+    </section>
+
+    <div class="search-box">
+
+        <input
+            class="search-txt"
+            type="text"
+            placeholder="🔎 Pesquisar livro..."
+            onkeyup="searchbar()"
+        >
+
     </div>
 
+    <section class="categorias">
 
-    <div class="livro">
-        <img src="{{ url_for('static', filename='alienista.jpg') }}">
+        <h2>📖 Categorias populares</h2>
 
-        <h2>O Alienista</h2>
+        <div class="tags">
+            <span>Literatura</span>
+            <span>Filosofia</span>
+            <span>Educação</span>
+            <span>Clássicos</span>
+            <span>Romance</span>
+            <span>Ciência</span>
+        </div>
 
-        <p>Autor: Machado de Assis</p>
+    </section>
 
-        <a href="/livros/alienista.pdf" download>
-            <button>Baixar livro</button>
-        </a>
+    <div class="estante">
+
+        <div class="livro">
+
+            <img src="{{ url_for('static', filename='dom-casmurro-32.jpg') }}">
+
+            <h2>Dom Casmurro</h2>
+
+            <p class="autor">
+                Autor: Machado de Assis
+            </p>
+
+            <p class="descricao">
+                Um dos maiores clássicos da literatura brasileira,
+                marcado por mistério, romance e reflexões psicológicas.
+            </p>
+
+            <a href="/livros/dom-casmurro.pdf" download>
+                <button>📘 Baixar livro</button>
+            </a>
+
+        </div>
+
+
+        <div class="livro">
+
+            <img src="{{ url_for('static', filename='alienista.jpg') }}">
+
+            <h2>O Alienista</h2>
+
+            <p class="autor">
+                Autor: Machado de Assis
+            </p>
+
+            <p class="descricao">
+                Uma crítica inteligente à sociedade e à loucura,
+                escrita com ironia e genialidade.
+            </p>
+
+            <a href="/livros/alienista.pdf" download>
+                <button>📘 Baixar livro</button>
+            </a>
+
+        </div>
+
+
+        <div class="livro">
+
+            <img src="{{ url_for('static', filename='a-republica.jpg') }}">
+
+            <h2>A República</h2>
+
+            <p class="autor">
+                Autor: Platão
+            </p>
+
+            <p class="descricao">
+                Uma obra filosófica fundamental que discute justiça,
+                política e a organização ideal da sociedade.
+            </p>
+
+            <a href="/livros/a-republica.pdf" download>
+                <button>📘 Baixar livro</button>
+            </a>
+
+        </div>
+
     </div>
 
+    <section class="info extra">
 
-    <div class="livro">
-        <img src="{{ url_for('static', filename='a-republica.jpg') }}">
+        <h2>🎓 Por que incentivar a leitura?</h2>
 
-        <h2>A República</h2>
+        <p>
+            A leitura ajuda na criatividade, pensamento crítico,
+            interpretação de texto e amplia o vocabulário.
+        </p>
 
-        <p>Autor: Platão</p>
+    </section>
 
-        <a href="/livros/a-republica.pdf" download>
-            <button>Baixar livro</button>
-        </a>
-    </div>
+    <footer>
 
-</div>
+        <p>
+            MMDC © 2026
+        </p>
+
+    </footer>
 
 </body>
 </html>
