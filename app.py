@@ -1,7 +1,9 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, flash, url_for
 import sqlite3
 
 app = Flask(__name__)
+
+app.secret_key = "biblioteca"
 
 
 # CONEXÃO
@@ -86,6 +88,7 @@ def cadastro():
 
     return render_template('cadastro.html')
 
+
 # LOGIN
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -112,7 +115,8 @@ def login():
             return redirect('/')
 
         else:
-            return 'Email ou senha incorretos!'
+            flash('Email ou senha incorretos!')
+            return redirect(url_for('login'))
 
     return render_template('login.html')
 
