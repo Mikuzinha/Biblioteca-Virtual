@@ -59,68 +59,137 @@
 
     <div class="estante">
 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <script
+    src="{{ url_for('static', filename='main.js') }}"
+    defer></script>
+
+</head>
+<body>
+
+    <div class="card-container">
+    </div>
+
+    <div class="estante">
+
+        <!-- DOM CASMURRO -->
         <div class="livro">
 
-            <img src="{{ url_for('static', filename='dom-casmurro-32.jpg') }}">
+            <img
+            src="{{ url_for('static', filename='dom-casmurro-32.jpg') }}"
+            alt="Dom Casmurro">
 
             <h2>Dom Casmurro</h2>
 
-            <p class="autor">
-                Autor: Machado de Assis
-            </p>
+            <p>Autor: Machado de Assis</p>
 
-            <p class="descricao">
-                Um dos maiores clássicos da literatura brasileira,
-                marcado por mistério, romance e reflexões psicológicas.
-            </p>
-
-            <a href="/livros/dom-casmurro.pdf" download>
-                <button>📘 Baixar livro</button>
+            <a href="{{ url_for('static', filename='livros/dom-casmurro.pdf') }}" download>
+                <button>Baixar livro</button>
             </a>
 
         </div>
 
 
+        <!-- O PEQUENO PRÍNCIPE -->
         <div class="livro">
 
-            <img src="{{ url_for('static', filename='alienista.jpg') }}">
+            <img
+            src="{{ url_for('static', filename='images.jpeg') }}"
+            alt="O Pequeno Principe">
 
-            <h2>O Alienista</h2>
+            <h2>O Pequeno Principe</h2>
 
-            <p class="autor">
-                Autor: Machado de Assis
-            </p>
+            <p>Autor: Antoine de Saint-Exupéry</p>
 
-            <p class="descricao">
-                Uma crítica inteligente à sociedade e à loucura,
-                escrita com ironia e genialidade.
-            </p>
-
-            <a href="/livros/alienista.pdf" download>
-                <button>📘 Baixar livro</button>
+            <a href="{{ url_for('static', filename='livros/pequeno-principe.pdf') }}" download>
+                <button>Baixar livro</button>
             </a>
 
         </div>
 
 
+        <!-- PEQUENO MANUAL ANTIRRACISTA -->
         <div class="livro">
 
-            <img src="{{ url_for('static', filename='a-republica.jpg') }}">
+            <img
+            src="{{ url_for('static', filename='PMA.jpg') }}"
+            alt="Pequeno Manual Antirracista">
+
+            <h2>Pequeno Manual Antirracista</h2>
+
+            <p>Autora: Djamila Ribeiro</p>
+
+            <a href="{{ url_for('static', filename='livros/pequeno-manual-antirracista.pdf') }}" download>
+                <button>Baixar livro</button>
+            </a>
+
+        </div>
+
+
+        <!-- MEMÓRIAS PÓSTUMAS -->
+        <div class="livro">
+
+            <img
+            src="{{ url_for('static', filename='MPB.jpg') }}"
+            alt="Memórias Póstumas de Brás Cubas">
+
+            <h2>Memórias Póstumas de Brás Cubas</h2>
+
+            <p>Autor: Machado de Assis</p>
+
+            <a href="{{ url_for('static', filename='livros/memorias-postumas.pdf') }}" download>
+                <button>Baixar livro</button>
+            </a>
+
+        </div>
+
+
+        <!-- A REPÚBLICA -->
+        <div class="livro">
+
+            <img
+            src="{{ url_for('static', filename='a-republica.jpg') }}"
+            alt="A República">
 
             <h2>A República</h2>
 
-            <p class="autor">
-                Autor: Platão
-            </p>
+            <p>Autor: Platão</p>
 
-            <p class="descricao">
-                Uma obra filosófica fundamental que discute justiça,
-                política e a organização ideal da sociedade.
-            </p>
-
-            <a href="/livros/a-republica.pdf" download>
-                <button>📘 Baixar livro</button>
+            <a href="{{ url_for('static', filename='livros/a-republica.pdf') }}" download>
+                <button>Baixar livro</button>
             </a>
+
+        </div>
+
+
+        <!-- O ALIENISTA -->
+        <div class="livro">
+
+            <img
+            src="{{ url_for('static', filename='alienista.jpg') }}"
+            alt="O Alienista">
+
+            <h2>O Alienista</h2>
+
+            <p>Autor: Machado de Assis</p>
+
+            <a href="{{ url_for('static', filename='livros/alienista.pdf') }}" download>
+                <button>Baixar livro</button>
+            </a>
+
+        </div>
+
+    </div>
 
         </div>
 
